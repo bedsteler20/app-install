@@ -1,0 +1,13 @@
+{
+  "files.watcherExclude": {
+    "**/.dart_tool": true,
+    ".flatpak/**": true,
+    "_build/**": true
+  },
+  "files.associations": {
+    "*.wrap": "ini"
+  },
+  "mesonbuild.configureOnOpen": false,
+  "mesonbuild.buildFolder": "_build",
+  "mesonbuild.mesonPath": "/home/bedsteler20/Projects/gnome-python-template/.flatpak/meson.sh"
+}
