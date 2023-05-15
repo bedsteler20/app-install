@@ -1,1 +1,1 @@
-i18n.gettext('@kebab_project@', preset: 'glib')
+i18n.gettext('app-install', preset: 'glib')

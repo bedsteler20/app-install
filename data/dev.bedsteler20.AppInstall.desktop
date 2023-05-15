@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=@kebab_project@
-Exec=@kebab_project@
-Icon=@app_id@
+Name=app-install
+Exec=app-install
+Icon=dev.bedsteler20.AppInstall
 Terminal=false
 Type=Application
 Categories=GTK;

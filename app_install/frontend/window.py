@@ -1,9 +1,9 @@
 from gi.repository import Gtk
 
 
-@Gtk.Template(resource_path='/@app_id_path@/window.ui')
-class @pascal_project@Window(Gtk.ApplicationWindow):
-    __gtype_name__ = '@pascal_project@Window'
+@Gtk.Template(resource_path='/dev/bedsteler20/AppInstall/window.ui')
+class AppInstallWindow(Gtk.ApplicationWindow):
+    __gtype_name__ = 'AppInstallWindow'
 
     label = Gtk.Template.Child()
 

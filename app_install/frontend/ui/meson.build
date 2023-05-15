@@ -8,7 +8,7 @@ blueprints = custom_target('blueprints',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
 )
 
-gnome.compile_resources('@kebab_project@',
+gnome.compile_resources('app-install',
   'gresource.xml',
   gresource_bundle: true,
   install: true,

@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: '@app_id@.desktop',
-       output: '@app_id@.desktop',
+        input: 'dev.bedsteler20.AppInstall.desktop',
+       output: 'dev.bedsteler20.AppInstall.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,8 +13,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: '@app_id@.appdata.xml',
-       output: '@app_id@.appdata.xml',
+        input: 'dev.bedsteler20.AppInstall.appdata.xml',
+       output: 'dev.bedsteler20.AppInstall.appdata.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -25,7 +25,7 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('@app_id@.gschema.xml',
+install_data('dev.bedsteler20.AppInstall.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

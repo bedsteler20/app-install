@@ -1,25 +1,25 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Flatpak",
+      "type": "python",
+      "request": "attach",
+      "listen": {
+        "host": "localhost",
+        "port": 5678
+      },
+      "appId": "dev.bedsteler20.AppInstall",
+      "pathMappings": [
         {
-            "name": "Python: Flatpak",
-            "type": "python",
-            "request": "attach",
-            "connect": {
-                "host": "localhost",
-                "port": 5678
-            },
-            "appId": "@app_id@",
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}/@kebab_project@",
-                    "remoteRoot": "/app/share/@kebab_project@/@kebab_project@"
-                }
-            ],
-            "justMyCode": true
+          "localRoot": "${workspaceFolder}/app-install",
+          "remoteRoot": "/app/share/app-install/app-install"
         }
-    ]
+      ],
+      "justMyCode": true
+    }
+  ]
 }

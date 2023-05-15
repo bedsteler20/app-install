@@ -1,5 +1,5 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, '@kebab_project@')
+moduledir = join_paths(pkgdatadir, 'app-install')
 
 python = import('python')
 
@@ -11,8 +11,8 @@ conf.set('pkgdatadir', pkgdatadir)
 conf.set('sourceroot', meson.source_root())
 
 configure_file(
-  input: '@kebab_project@.in.py',
-  output: '@kebab_project@',
+  input: 'app-install.in.py',
+  output: 'app-install',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')

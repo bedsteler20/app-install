@@ -1,14 +1,14 @@
 import sys
 
 from gi.repository import Gtk, Gio
-from ..frontend.window import @pascal_project@Window
+from ..frontend.window import AppInstallWindow
 
 
-class @pascal_project@Application(Gtk.Application):
+class AppInstallApplication(Gtk.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='@app_id@',
+        super().__init__(application_id='dev.bedsteler20.AppInstall',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.create_action('quit', self.quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
@@ -22,18 +22,18 @@ class @pascal_project@Application(Gtk.Application):
         """
         win = self.props.active_window
         if not win:
-            win = @pascal_project@Window(application=self)
+            win = AppInstallWindow(application=self)
         win.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Gtk.AboutDialog(transient_for=self.props.active_window,
                                 modal=True,
-                                program_name='@kebab_project@',
-                                logo_icon_name='@app_id@',
+                                program_name='app-install',
+                                logo_icon_name='dev.bedsteler20.AppInstall',
                                 version='0.1.0',
-                                authors=['@author@'],
-                                copyright='© 2023 @author@')
+                                authors=['Cameron Dehning'],
+                                copyright='© 2023 Cameron Dehning')
         about.present()
 
     def on_preferences_action(self, widget, _):
@@ -58,5 +58,5 @@ class @pascal_project@Application(Gtk.Application):
 
 def main(version):
     """The application's entry point."""
-    app = @pascal_project@Application()
+    app = AppInstallApplication()
     return app.run(sys.argv)

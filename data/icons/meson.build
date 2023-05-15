@@ -1,4 +1,4 @@
-application_id = '@app_id@'
+application_id = 'dev.bedsteler20.AppInstall'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(

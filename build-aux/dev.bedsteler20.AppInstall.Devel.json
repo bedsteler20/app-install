@@ -1,9 +1,9 @@
 {
-    "id" : "@app_id@",
+    "id" : "dev.bedsteler20.AppInstall",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
-    "command" : "@kebab_project@",
+    "command" : "app-install",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -26,7 +26,7 @@
     "modules" : [
         "python3-debugpy.json",
         {
-            "name" : "@kebab_project@",
+            "name" : "app-install",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

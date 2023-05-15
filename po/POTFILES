@@ -1,6 +1,6 @@
-data/@app_id@.desktop.in
-data/@app_id@.appdata.xml.in
-data/@app_id@.gschema.xml
+data/dev.bedsteler20.AppInstall.desktop.in
+data/dev.bedsteler20.AppInstall.appdata.xml.in
+data/dev.bedsteler20.AppInstall.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

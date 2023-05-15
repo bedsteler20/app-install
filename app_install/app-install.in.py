@@ -26,9 +26,9 @@ def start_debugger():
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('@kebab_project@', localedir)
-locale.textdomain('@kebab_project@')
-gettext.install('@kebab_project@', localedir)
+locale.bindtextdomain('app-install', localedir)
+locale.textdomain('app-install')
+gettext.install('app-install', localedir)
 
 if os.environ.get("DEBUG_MODE") == "1":
     start_debugger()
@@ -39,8 +39,8 @@ if __name__ == '__main__':
 
     from gi.repository import Gio
     resource = Gio.Resource.load(os.path.join(
-        pkgdatadir, '@kebab_project@.gresource'))
+        pkgdatadir, 'app-install.gresource'))
     resource._register()
 
-    from @snake_project@.backend import main
+    from app_install.backend import main
     sys.exit(main.main(VERSION))
